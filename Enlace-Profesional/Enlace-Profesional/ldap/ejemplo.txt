@@ -1,0 +1,28 @@
+// invocamos la clase e inicializamos conexión
+require_once '../ldap/class.AuthLdap.php';
+$ldap = new AuthLdap();
+$server[0] = $servidor;
+$ldap->server = $server;
+$ldap->dn = $dn;
+
+
+  if ( $ldap->connect()) { // nos conectamos a LDAP
+
+                               if ($ldap->checkPass(cedula,clave)) { 
+//verificamos la clave y usuario
+
+                                          $ldap->connect(); //me vuelvo 
+a conectar para obtener datos
+$nombre=$ldap->getAttribute(cedula,'cn'); //me devuelve el nombre del 
+funcionario
+$correo=$ldap->getAttribute(cedula,'mail'); //me devuelve el correo 
+electrónico
+                                }else{
+
+                                         MENSAJE DE ERROR DEBIDO A 
+USUARIO INCORRECTO
+                                 }
+}else{
+
+MENSAJE DE QUE NO HAY CONECCION CON EL SERVIDOR
+}
