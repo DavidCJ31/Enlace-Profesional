@@ -34,13 +34,16 @@
 									
 									<?php
 										if($cv == null ){
-											echo "Adjunte un CV";
+											echo "Adjunte un CV Aqui";
+                                            echo '<input accept="application/pdf" type="file" name="cv" required="">';
+                                            echo '<div class="col-sm-12 mt-10"><button type="submit" class="btn btn-primary">Subir</button></div>';
 										}
 										else{
 											$src = 'data:application/pdf;base64,'.base64_encode($cv);
-											echo '<a href='.$src.' class="btn btn-primary btn-sm btn-inverse" download>VER MI CV</a>';
+											echo '<a href='.$src.' class="btn btn-primary btn-sm btn-inverse" download>Ver CV</a>';
+											echo '<iframe id="iframePDF" src='.$src.' frameborder="0" width="100%"
+											height="100%"></iframe>';
 										}
-										
 										?>
 										
 									</div>
