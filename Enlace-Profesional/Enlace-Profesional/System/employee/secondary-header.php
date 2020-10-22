@@ -34,9 +34,11 @@
 									
 									<?php
 										if($cv == null ){
+											echo '<form action="app/new-cv.php" method="POST" enctype="multipart/form-data">';
 											echo "Adjunte un CV Aqui";
                                             echo '<input accept="application/pdf" type="file" name="cv" required="">';
-                                            echo '<div class="col-sm-12 mt-10"><button type="submit" class="btn btn-primary">Subir</button></div>';
+											echo '<div class="col-sm-12 mt-10"><button type="submit" class="btn btn-primary">Subir</button></div>';
+											echo '</form>';
 										}
 										else{
 											$src = 'data:application/pdf;base64,'.base64_encode($cv);
