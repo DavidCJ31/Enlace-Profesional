@@ -452,8 +452,8 @@ $jobexpired = false;
 								?>
 								<br><br>
 								<div id="socialSharing"> Compartir empleo:
-								<a href="http://www.facebook.com/sharer.php?u=www.intermediacionlaboral.una.ac.cr/System/explore-job.php?jobid=<?php echo $jobid;?>" target="_blank" type="button" class="btn"> <img src="images/ico/facebook.png" /> </a>
-								<a href="http://twitter.com/share?text=Intermediacion Laboral UNA&hashtags=Trabajo,IntermediacionLaboralUNA" target="_blank" type="button" class="btn"><img src="images/ico/twitter.png" /></a>
+								<a href="http://www.facebook.com/sharer.php?u=http://enlace-pro.byethost7.com/EnlaceCompartido/Enlace-Profesional/Enlace-Profesional/Enlace-Profesional/System/explore-job.php?jobid=?jobid=<?php echo $jobid;?>" target="_blank" type="button" class="btn"> <img src="images/ico/facebook.png" /> </a>
+								<a href="http://twitter.com/share?url=http://enlace-pro.byethost7.com/EnlaceCompartido/Enlace-Profesional/Enlace-Profesional/Enlace-Profesional/System/explore-job.php?jobid=?<?php echo $jobid;?>&hashtags=Trabajo,IntermediacionLaboralUNA" target="_blank" type="button" class="btn"><img src="images/ico/twitter.png" /></a>
 								<a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.soportedoc.una.ac.cr/Enlace-Profesional/System/admin/app/auth-admin.php" target="_blank" type="button" class="btn"><img src="images/ico/linkedin.png" /></a>
 		  								 
 								<button type="button" class="btn btn-primary" id="copytoclipboard">Copiar URL</button>
