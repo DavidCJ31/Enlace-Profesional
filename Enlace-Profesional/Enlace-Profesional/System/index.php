@@ -353,8 +353,6 @@ function formato_mes($mes){
 							foreach($resultb as $rowb) {
 							$complogo = $rowb['avatar'];
 							$thecompname = $rowb['first_name'];	
-								
-							}
 							
 							if ($type == "Freelance") {
 							$sta = '<div class="job-label label label-success">
@@ -413,7 +411,7 @@ function formato_mes($mes){
 							</a>
 								
 							<?php
-
+							}
                             }
 	                        }catch(PDOException $e)
                             { 

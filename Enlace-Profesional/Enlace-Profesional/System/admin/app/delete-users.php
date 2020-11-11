@@ -10,7 +10,6 @@ if(isset($_POST['Uid'])){
     $Dmotivo = $_POST['Ddenegacion'];
     $Uphone = $_POST['Uphone']; //== "No tiene un número registrado"){
         
-    
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

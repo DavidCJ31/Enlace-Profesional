@@ -129,7 +129,7 @@ if ($myrole == "superadmin") {
 												
                                                     <div class="form-group">
                                                         <label>Descripción<b style="color: red;">*</b></label>
-                                                        <textarea type="text" name="textDescrip" id="textDescrip" class="form-control" placeholder="Ingrese una pequeña descripcion" required></textarea>
+                                                        <textarea type="text" name="textDescrip" id="textDescrip" class="form-control" placeholder="Ingrese una pequeña descripcion" required rows="5" cols="51" maxlength="135" style="resize:none" serialize="none" ></textarea>
                                                         <span id="strength"></span>
                                                     </div>
                                                 

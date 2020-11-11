@@ -1,6 +1,6 @@
 <div style="height: 100px;">
 </div>
-<footer class="footer-wrapper" style="position: fixed; bottom: 0; width: 100%;">
+<footer class="footer-wrapper" style=" bottom: 0; width: 100%;">
 			
 	<div class="bottom-footer">
 	

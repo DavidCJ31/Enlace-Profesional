@@ -147,7 +147,7 @@ header("location:./");
 										if ($empavatar == null) {
 										print '<center><img class="rounded-circle autofit2" src="../images/default.jpg"  alt="image"  /></center>';
 										}else{
-										echo '<center><img class="rounded-circle autofit2" alt="image" src="../data:image/jpeg;base64,'.base64_encode($empavatar).'"/></center>';	
+										echo '<center><img class="rounded-circle autofit2" alt="image" title="'.$myfname.'"  src="data:image/jpeg;base64,'.base64_encode($myavatar).'"/></center>';	
 										}
 										?>
 										</div>
@@ -324,8 +324,12 @@ header("location:./");
 												<!-- <p class="font600 text-primary"><?php //echo $row['issuer']; ?></p> -->
 												<p>	<?php 
 														$sourc = 'data:application/pdf;base64,'.base64_encode($att);												
+														$sourc = 'data:application/pdf;base64,'.base64_encode($att);
+														echo '<form action="../employer/cv_view.php" method="POST" enctype="multipart/form-data" target="new">';
+														echo '<input type="text" style="display:none;" name="cv" value='.$sourc.'>';
+														echo '<button type="submit" class="btn btn-primary" style="display:inline;">Ver adjunto</button>';
+														echo '</form>';
 													?>
-												<a target="_blank" class="btn btn-primary btn-sm mb-5 mb-0-sm" href="<?php echo $sourc; ?>">Ver Adjunto</a></p>
 												</li>
 												<?php
 												}

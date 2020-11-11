@@ -63,7 +63,7 @@ $mypass = md5($_POST['password']);
 	$stmt->bindParam(':lastlogin', $last_login);
     $stmt->bindParam(':cedula', $myced);
     $stmt->execute();
-	header("location:../index.php");
+	header("location:../");
 					  
 	}catch(PDOException $e)
     {

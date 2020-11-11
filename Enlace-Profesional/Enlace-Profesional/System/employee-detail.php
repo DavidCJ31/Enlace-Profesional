@@ -158,8 +158,14 @@ header("location:./");
 
 										<?php 
 										if($cv != null){
-										$src = 'data:application/pdf;base64,'.base64_encode($cv);
-										echo '<a href='.$src.' class="btn btn-info btn-sm" target="_blank" >VER CV</a>';}?>
+											$src = 'data:application/pdf;base64,'.base64_encode($cv);
+											echo '<form action="employer/cv_view.php" method="POST" enctype="multipart/form-data">';
+											echo '<input type="text" style="display:none;" name="cv" value='.$src.'>';
+											echo '<button type="submit" class="btn btn-primary" style="display:inline;">VER CV</button>';
+											echo '</form>';
+										}
+										?>
+										
 										<a href="employer/cv.php?id=<?php echo $empid;?>" target="_blank" class="btn btn-info btn-sm">Descargar información</a>
 									
 										<ul class="meta-list clearfix">
@@ -282,10 +288,15 @@ header("location:./");
 											    <li>
 												<h5><?php echo $row['title']; ?> </h5>
 												<p class="text-muted font-italic"><?php echo $row['timeframe']; ?><span class="font600 text-primary"> <?php echo $row['institution']; ?></span> <?php echo $row['country']; ?></p>
-												<p>	<?php 
-														$source = 'data:application/pdf;base64,'.base64_encode($certificate);												
+												<p>	
+														<?php 
+														$source = 'data:application/pdf;base64,'.base64_encode($certificate);
+														echo '<form action="employer/cv_view.php" method="POST" enctype="multipart/form-data">';
+														echo '<input type="text" style="display:none;" name="cv" value='.$source.'>';
+														echo '<button type="submit" class="btn btn-primary" style="display:inline;">Ver Certificado</button>';
+														echo '</form>';
 														?>
-												<a target="_blank" class="btn btn-primary btn-sm mb-5 mb-0-sm" href="<?php echo $source; ?>">Ver Certificado</a></p>
+												</p>
 												</li>
 												<?php
 												}
@@ -322,10 +333,15 @@ header("location:./");
 												<li>
 												<h5><?php echo $row['title']; ?> </h5>
 												<!-- <p class="font600 text-primary"><?php //echo $row['issuer']; ?></p> -->
-												<p>	<?php 
-														$sourc = 'data:application/pdf;base64,'.base64_encode($att);												
+												<p>
+													<?php 
+														$sourc = 'data:application/pdf;base64,'.base64_encode($att);
+														echo '<form action="employer/cv_view.php" method="POST" enctype="multipart/form-data" target="new">';
+														echo '<input type="text" style="display:none;" name="cv" value='.$sourc.'>';
+														echo '<button type="submit" class="btn btn-primary" style="display:inline;">Ver Adjunto</button>';
+														echo '</form>';
 													?>
-												<a target="_blank" class="btn btn-primary btn-sm mb-5 mb-0-sm" href="<?php echo $sourc; ?>">Ver Adjunto</a></p>
+												</p>
 												</li>
 												<?php
 												}
