@@ -180,7 +180,7 @@ $page = 1;
                                                                             style="color: red;">*</b></label>
                                                                     <input class="form-control"
                                                                         value="<?php echo "$att_title"; ?>"
-                                                                        placeholder="Ejp: Licencia de conducir, etc."
+                                                                        placeholder="Ejemplo: Licencia de conducir, etc."
                                                                         type="text" name="title" required>
                                                                 </div>
 
@@ -322,7 +322,7 @@ $page = 1;
                                             <div class="form-group">
                                                 <label>Tipo de Documentación<b style="color: red;">*</b></label>
                                                 <input class="form-control"
-                                                    placeholder="Ejp: Licencia de conducir, etc." type="text"
+                                                    placeholder="Ejemplo: Licencia de conducir, etc." type="text"
                                                     name="title" required>
                                             </div>
 

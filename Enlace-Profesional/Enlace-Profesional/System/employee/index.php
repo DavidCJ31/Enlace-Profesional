@@ -339,8 +339,8 @@ echo $e;
 												<div class="col-sm-12 col-md-12">
 												
 													<div class="form-group ">
-														<label>Sobre mi</label>
-														<textarea name="about" class=" form-control" placeholder="Ingresa tu descripción ..." style="height: 200px;"><?php echo "$mydesc"; ?></textarea>
+														<label>Descripción Personal</label>
+														<textarea name="about" class=" form-control" placeholder="Ingresa una pequeña descripción personal ..." style="height: 100%; resize:none" maxlength="135" serialize="none" ><?php echo "$mydesc"; ?></textarea>
 													</div>
 													
 												</div>
@@ -361,7 +361,7 @@ echo $e;
 										<div class="col-sm-12 col-md-12">
 												
 										<div class="form-group bootstrap3-wysihtml5-wrapper">
-										<label>Mostrar Imagen</label>
+										<label>Seleccionar Foto de Perfil</label>
 										<input accept="image/*" type="file" name="image"  required >
 										</div>
 													

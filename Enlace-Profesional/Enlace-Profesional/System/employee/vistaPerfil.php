@@ -183,7 +183,7 @@ header("location:./");
 						
 									<div class="employee-detail-company-overview mt-40 clearfix">
 									
-										<h3>Resumen</h3>
+										<h3>Perfil profesional</h3>
 										
 										<p><?php echo "$about"; ?></p>
 										

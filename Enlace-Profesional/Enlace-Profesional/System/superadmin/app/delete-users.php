@@ -1,6 +1,6 @@
 <?php 
 require '../constants/db_config.php';
-require '../constants/settings.php';
+require '../../constants/settings.php';
 require '../constants/check-login.php';
 if(isset($_POST['Uid'])){
     $id = $_POST['Uid'];

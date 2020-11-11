@@ -11,6 +11,7 @@ textarea {
 <div class="modal-header">
 <h4 class="modal-title text-center">Cree su cuenta de empresa gratis</h4>
 </div>
+<p class="modal-title text-center">(<span style="color:red;">*</span>) Son datos obligatorios</p>
 
 <div class="modal-body">
 																
@@ -23,7 +24,7 @@ textarea {
 <div class="col-sm-12 col-md-12">
 
 <div class="form-group"> 
-<label>Nombre de Empresa</label>
+<label>Nombre de Empresa <span style="color:red;">*</span> </label>
 <input class="form-control" placeholder="Ingrese el nombre de empresa" name="company" required type="text"> 
 </div>
 												
@@ -32,8 +33,8 @@ textarea {
 <div class="col-sm-12 col-md-12">
 
 <div class="form-group"> 
-<label>Actividad Económica</label>
-<input class="form-control" placeholder="Ejm: Ventas/Viajes, Software de PC's etc" name="type" required type="text"> 
+<label>Actividad Económica <span style="color:red;">*</span></label>
+<input class="form-control" placeholder="Ejemplo: Ventas/Viajes, Software de PC's etc" name="type" required type="text"> 
 </div>
 												
 </div>
@@ -41,7 +42,7 @@ textarea {
 <div class="col-sm-12 col-md-12">
 
 <div class="form-group"> 
-<label>Nombre persona encargada</label>
+<label>Nombre persona encargada <span style="color:red;">*</span></label>
 <input class="form-control" placeholder="Ingrese el nombre de la persona encargada" name="encargado" required type="text"> 
 </div>
 												
@@ -50,7 +51,7 @@ textarea {
 <div class="col-sm-12 col-md-12">
 
 <div class="form-group"> 
-<label>Correo Electrónico</label>
+<label>Correo Electrónico <span style="color:red;">*</span></label>
 <input class="form-control" placeholder="Ingrese su Correo Electrónico" name="email" required type="text"> 
 </div>
 												
@@ -59,7 +60,7 @@ textarea {
 <div class="col-sm-12 col-md-12">
 												
 <div class="form-group"> 
-<label>Contraseña</label>
+<label>Contraseña <span style="color:red;">*</span></label>
 <input class="form-control" placeholder="Min 8 y Max 20 caracteres" name="password" id="password" required type="password" onkeyup="javaScript:verifyPasswordStrength();"> 
 </div>
 <span id="strength"></span>
@@ -69,7 +70,7 @@ textarea {
 <div class="col-sm-12 col-md-12">
 												
 <div class="form-group"> 
-<label>Confirmar contraseña</label>
+<label>Confirmar contraseña <span style="color:red;">*</span></label>
 <input class="form-control" placeholder="Repita su contraseña" name="confirmpassword" id="confirmpassword" required type="password" onkeyup="javascript:conPassword();"> 
 </div>
 <span id="passwordMsg"></span>

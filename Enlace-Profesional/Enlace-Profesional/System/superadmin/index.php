@@ -114,7 +114,7 @@ if ($myrole == "superadmin") {
 												<div class="col-sm-6 col-md-4">
 												
 													<div class="form-group">
-														<label>Correo</label>
+														<label>Correo Institucional</label>
 														<input type="email" name="email" required class="form-control" value="<?php echo "$myemail"; ?>" placeholder="Ingresa tu Correo Electrónico">
 													</div>
 													
@@ -150,7 +150,7 @@ if ($myrole == "superadmin") {
 										<div class="col-sm-12 col-md-12">
 												
 										<div class="form-group bootstrap3-wysihtml5-wrapper">
-										<label>Mostrar Imagen</label>
+										<label>Seleccionar Foto de Perfil</label>
 										<input accept="image/*" type="file" name="image"  required >
 										</div>
 													

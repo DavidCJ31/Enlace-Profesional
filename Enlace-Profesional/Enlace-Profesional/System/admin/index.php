@@ -114,7 +114,7 @@ if ($myrole == "admin") {
 												<div class="col-sm-6 col-md-4">
 												
 													<div class="form-group">
-														<label>Correo</label>
+														<label>Correo institucional</label>
 														<input type="email" name="email" required class="form-control" value="<?php echo "$myemail"; ?>" placeholder="Ingresa tu Correo Electrónico">
 													</div>
 													

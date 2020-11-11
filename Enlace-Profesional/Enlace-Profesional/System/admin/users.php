@@ -129,7 +129,7 @@ if ($myrole == "admin") {
                                                         <th>Discapacidad</th>
                                                         <th>Último inicio</th>
                                                         <th>Ver Perfil</th>
-                                                        <th>Eliminar</th>
+                                                       <!-- <th>Eliminar</th> -->
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -157,7 +157,7 @@ if ($myrole == "admin") {
                                                                         <td> <a class="fa fa-eye" href="../employee-detail.php?empid=<?php echo $row['id']; ?>"></a></td>
                                                                         <td><form action="delete-employee.php" method="post">
                                                                         <input type="hidden" value="<?php echo $row['id'];?>" name="id">
-                                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                                                        <!-- <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i></button> -->
                                                                         </form></td>
                                                                        </tr>
 
@@ -190,7 +190,6 @@ if ($myrole == "admin") {
                                                                  
                                                                
                                                         ?>
-                                                        
                                                     
                                                             </tbody>
                                                     <tfoot>
@@ -201,7 +200,7 @@ if ($myrole == "admin") {
                                                         <th>Discapacidad</th>
                                                         <th>Último inicio</th>
                                                         <th>Ver Perfil</th>
-                                                        <th>Eliminar</th>
+                                                        <!-- <th>Eliminar</th> -->
                                                         </tr>
                                                     </tfoot>
                                                 </table>

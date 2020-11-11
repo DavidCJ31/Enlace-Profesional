@@ -117,7 +117,7 @@ if ($myrole == "superadmin") {
 												<div class="col-sm-6 col-md-4">
 												
 													<div class="form-group">
-														<label>Enlace <b style="color: red;">*</b></label>
+														<label>Enlace (URL) <b style="color: red;">*</b></label>
 														<input name="linkVideo" required type="text" class="form-control" placeholder="Ingrese el enlace">
 													</div>
 													

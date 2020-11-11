@@ -4,6 +4,7 @@
 <div class="modal-header">
 <h4 class="modal-title text-center">Crea tu cuenta personal gratis</h4>
 </div>
+<p class="modal-title text-center">(<span style="color:red;">*</span>) Son datos obligatorios</p>
 
 <div class="modal-body">
 																
@@ -16,7 +17,7 @@
 <div class="col-sm-12 col-md-12">
 
 <div class="form-group"> 
-<label>Nombre</label>
+<label>Nombre <span style="color:red;">*</span></label>
 <input class="form-control" placeholder="Ingrese su Nombre" name="fname" required type="text"> 
 </div>
 												
@@ -24,8 +25,8 @@
 
 <div class="col-sm-12 col-md-12">
 
-<div class="form-group"> 
-<label>Apellidos</label>
+<div class="form-group">
+<label>Apellidos <span style="color:red;">*</span></label>
 <input class="form-control" placeholder="Ingrese sus Apellidos" name="lname" required type="text"> 
 </div>
 												
@@ -34,7 +35,7 @@
 <div class="col-sm-12 col-md-12">
 
 <div class="form-group"> 
-<label>Cédula<small> (Debe colocar todos los números, incluyendo los ceros)</small></label>
+<label>Cédula <span style="color:red;">*</span><small> (Debe colocar todos los números, incluyendo los ceros)</small></label>
 <input class="form-control" placeholder="Ingrese su cédula" name="cedula" required type="text"> 
 </div>
 												
@@ -43,7 +44,7 @@
 <div class="col-sm-12 col-md-12">
 
 <div class="form-group"> 
-<label>Email</label>
+<label>Email <span style="color:red;">*</span></label>
 <input class="form-control" placeholder="Ingrese su email" name="email" required type="text"> 
 </div>
 												
@@ -52,7 +53,7 @@
 <div class="col-sm-12 col-md-12">
 												
 <div class="form-group"> 
-<label>Contraseña<small> (Debe utilizar la misma contraseña de la UNA)</small></label>
+<label>Contraseña <span style="color:red;">*</span><small> (Debe utilizar la misma contraseña de la UNA)</small></label>
 <input class="form-control" placeholder="Usar contraseña de matrícula UNA" name="password" required type="password"> 
 <!-- <span id="strength"></span> -->
 </div>

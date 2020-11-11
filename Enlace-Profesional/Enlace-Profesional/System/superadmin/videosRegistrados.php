@@ -143,8 +143,8 @@ if ($myrole == "superadmin") {
 
                                                                     <tr>
                                                                         <td><?php echo $row['video_name']; ?></td>
-                                                                        <td><?php echo $row['video_link']; ?></td>
-                                                                        <td><?php echo $row['video_description']; ?></td>
+                                                                        <td style="width: auto;"><?php echo $row['video_link']; ?></td>
+                                                                        <td style="width: auto;" ><?php echo $row['video_description']; ?></td>
                                                                         <td><?php echo $row['created_at']; ?></td>
                                                                         <td><form action="editarVideo.php" method="post">
                                                                         <input type="hidden" value="<?php echo $row['id'];?>" name="id">

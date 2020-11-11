@@ -167,7 +167,7 @@ header("location:../");
 												<div class="col-sm-6 col-md-4">
 												
 													<div class="form-group">
-														<label>Establecida en</label>
+														<label>Año de inicio de operaciones</label>
                                                     <input name="year" placeholder="Ingrese años ej: 2016, 2017, 2018" type="text" class="form-control" value="<?php echo "$esta"; ?>" required>
 													</div>
 													
@@ -203,7 +203,7 @@ header("location:../");
 
 													<div class="col-sm-6 col-md-4">
 														<div class="form-group">
-														<label>Sitio Web</label>
+														<label>Sitio Web o Red Social Favorita</label>
 														<input type="text" class="form-control" value="<?php echo "$myweb"; ?>" name="web" placeholder="Ingresa tu website">
 														</div>
 													</div>

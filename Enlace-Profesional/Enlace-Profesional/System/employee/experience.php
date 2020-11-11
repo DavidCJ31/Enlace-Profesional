@@ -105,7 +105,9 @@ $page = 1;
 				<div class="admin-section-title">
 				
 					<h2>Experiencia Laboral o Profesional</h2>
-					
+					<p>Se recomienda poner su experiencia laboral 
+					de mas reciente a mas antigua.
+					</p>
 				</div>
 				
 				<div class="resume-list-wrapper">
@@ -147,8 +149,6 @@ $page = 1;
 								
 									<a>
 
-										
-										
 										<h4><?php echo "$title"; ?></h4>
 										
 										<div class="row">
