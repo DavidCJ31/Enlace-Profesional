@@ -121,7 +121,7 @@ $page = 1;
 									 $course = $row['title'];
 									 $timeframe = $row['timeframe'];
 									 $course_id = $row['id'];
-									 $certificate = $row['certificate'];
+									 $certificate = $row['certificat'];
 									 ?>
 									 									<div class="resume-list-item">
 										
@@ -408,7 +408,7 @@ $page = 1;
 								   	<div class="col-sm-12 col-md-12">
 						
 							        <div class="form-group"> 
-								    <label>Periodo de Tiempo<b style="color: red;">*</b></label>
+								    <label>Periodo de Tiempo <b style="color: red;">*</b></label>
 								    <input class="form-control" placeholder="Ejp: 2015 a 2016" type="text" name="timeframe" required> 
 							        </div>
 						
@@ -418,7 +418,7 @@ $page = 1;
 						
 							        <div class="form-group"> 
 								    <label>Adjunta tu Certificado</label>
-								    <input class="form-control" accept="application/pdf" type="file" name="certificate" > 
+								    <input class="form-control" accept="application/pdf" type="file" name="certificate" require> 
 							        </div>
 						
 						           </div>

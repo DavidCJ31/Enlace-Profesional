@@ -9,10 +9,9 @@ $myidU = $_GET['id'];
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $stmt1 = $conn->prepare("SELECT first_name,last_name,phone,city,province,email,about FROM tbl_users where id='".$myidU."'");
+        $stmt1 = $conn->prepare("SELECT first_name,last_name,phone,city,avatar,province,email,about FROM tbl_users where id='".$myidU."'");
         $stmt1->execute();
         $result1 = $stmt1->fetch(PDO::FETCH_ASSOC);
-
         $nom = $result1['first_name']." ".$result1['last_name'];
         $tel = "Teléfono: ".$result1['phone'];
         $ced = "Cédula: "."$myidU";

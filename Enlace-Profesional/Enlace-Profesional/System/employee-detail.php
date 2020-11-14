@@ -283,7 +283,7 @@ header("location:./");
 													<ul class="employee-detail-list">';
                                                 foreach($result as $row)
                                                 {
-													$certificate = $row['certificate'];
+													$certificate = $row['certificat'];
                                                 ?>
 											    <li>
 												<h5><?php echo $row['title']; ?> </h5>

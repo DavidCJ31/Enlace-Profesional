@@ -195,13 +195,13 @@ header("location:./");
 												try {
                                                 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
                                                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                                $stmt = $conn->prepare("SELECT * FROM tbl_academic_qualification WHERE member_no = :empid ORDER BY id");
+                                                $stmt = $conn->prepare("SELECT * FROM tbl_titles WHERE user_id = :empid ORDER BY id");
 	                                            $stmt->bindParam(':empid', $empid);
                                                 $stmt->execute();
                                                 $result = $stmt->fetchAll();
 	                                            $rec = count($result);
 	                                            if ($rec == "0") {
- 
+
 	                                            }else{
 													echo '<h3>Educación</h3>
 													<ul class="employee-detail-list">';
@@ -209,11 +209,8 @@ header("location:./");
                                                 {
                                                 ?>
 												<li>
-												<h5><?php echo $row['course']; ?> </h5>
-												<p class="text-muted font-italic">Level - <?php echo $row['level']; ?> , <?php echo $row['timeframe']; ?><span class="font600 text-primary"> <?php echo $row['institution']; ?></span> <?php echo $row['country']; ?></p>
-												<p><?php $sour = 'data:application/pdf;base64,'.base64_encode($row['certificate']);												
-														?>
-												<a target="_blank" class="btn btn-primary btn-sm mb-5 mb-0-sm" href="<?php echo $sour; ?>">Ver Certificado</a></p>
+												<h5><?php echo $row['education_area']; ?></h5>
+												<p class="text-muted font-italic">Level - <?php echo $row['education_area']; ?> , <?php echo $row['education']; ?><span class="font600 text-primary"> <?php echo $row['title']; ?></span> <?php echo $row['university']; ?></p>
 												</li>
 												<?php
 	                                            }
@@ -277,15 +274,19 @@ header("location:./");
 													<ul class="employee-detail-list">';
                                                 foreach($result as $row)
                                                 {
-													$certificate = $row['certificate'];
+													$certificate = $row['certificat'];
                                                 ?>
 											    <li>
 												<h5><?php echo $row['title']; ?> </h5>
 												<p class="text-muted font-italic"><?php echo $row['timeframe']; ?><span class="font600 text-primary"> <?php echo $row['institution']; ?></span> <?php echo $row['country']; ?></p>
-												<p>	<?php 
-														$source = 'data:application/pdf;base64,'.base64_encode($certificate);												
-														?>
-												<a target="_blank" class="btn btn-primary btn-sm mb-5 mb-0-sm" href="<?php echo $source; ?>">Ver Certificado</a></p>
+												
+													<?php												
+														$source = 'data:application/pdf;base64,'.base64_encode($certificate);
+														echo '<form action="../employer/cv_view.php" method="POST" enctype="multipart/form-data" target="new">';
+														echo '<input type="text" style="display:none;" name="cv" value='.$source.'>';
+														echo '<button type="submit" class="btn btn-primary" style="display:inline;">Ver Certificado</button>';
+														echo '</form>';
+													?>
 												</li>
 												<?php
 												}
@@ -322,7 +323,7 @@ header("location:./");
 												<li>
 												<h5><?php echo $row['title']; ?> </h5>
 												<!-- <p class="font600 text-primary"><?php //echo $row['issuer']; ?></p> -->
-												<p>	<?php 
+													<?php 
 														$sourc = 'data:application/pdf;base64,'.base64_encode($att);												
 														$sourc = 'data:application/pdf;base64,'.base64_encode($att);
 														echo '<form action="../employer/cv_view.php" method="POST" enctype="multipart/form-data" target="new">';
