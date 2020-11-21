@@ -17,7 +17,7 @@ require '../constants/db_config.php';
         $stmt->bindParam(':vdescription',$descripcion);
         $stmt->bindParam(':id',$id);
         $stmt->execute();
-            header("location:../index.php?r=1234");
+            header("location:../videosRegistrados.php?r=1234");
     }catch(PDOException $e){
         echo $e;
     }

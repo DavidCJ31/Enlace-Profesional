@@ -159,8 +159,13 @@ header("location:./");
 
 										<?php 
 										if($cv != null){
-										$src = 'data:application/pdf;base64,'.base64_encode($cv);
-										echo '<a href='.$src.' class="btn btn-info btn-sm" target="_blank" >VER CV</a>';}?>
+										$src = 'data:application/pdf;base64,'.base64_encode($cv); 
+										echo '<form action="../employer/cv_view.php" method="POST" enctype="multipart/form-data" target="new">';
+										echo '<input type="text" style="display:none;" name="cv" value='.$src.'>';
+										echo '<button type="submit" class="btn btn-primary" style="display:inline;">Ver CV</button>';
+										echo '</form>';
+										}
+										?>
 										
 										<ul class="meta-list clearfix">
 										<div class="row">

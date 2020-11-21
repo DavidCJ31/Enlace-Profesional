@@ -150,7 +150,7 @@ if ($myrole == "admin") {
 										<div class="col-sm-12 col-md-12">
 												
 										<div class="form-group bootstrap3-wysihtml5-wrapper">
-										<label>Mostrar Imagen</label>
+										<label>Seleccionar Foto de Perfil</label>
 										<input accept="image/*" type="file" name="image"  required >
 										</div>
 													

@@ -7,7 +7,8 @@ if(isset($_GET['idEm'])){
     $id = $_GET['idEm'];
     $motivoD = $_POST['motivoD'];
     $descripcion = $_POST['Ddenegacion'];
-    $correo = $_POST['email'];
+    //$correo = $_POST['email'];
+    $correo = "kevinartavia29@gmail.com";
     $asunto = "Acceso Denegado";
     $mensaje = "<strong>Acceso denegado</strong><br/><br/>
     La Universidad Nacional agradece su interés en el Servicio de Intermediación Laboral, sin embargo 

@@ -11,7 +11,7 @@ if(isset($_POST['id'])){
         $stmt = $conn->prepare("DELETE from tbl_tutorials WHERE id = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
-            header("location:../users.php?r=5678");
+            header("location:../videosRegistrados.php?r=5678");
     }catch(PDOException $e){
         echo $e;
     }
