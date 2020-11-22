@@ -10,19 +10,19 @@ require_once '../../../vendor/autoload.php';
 
 // Instantiation and passing `true` enables exceptions
 
-
-
 function enviarCorreo($correo,$mensaje,$asunto){  
-    if($correo && $mensaje && $asunto){
+    if($correo!='' && $mensaje!='' && $asunto!=''){
         $mail = new PHPMailer(true);
             try {
                 //Server settings
-                // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+                $mail->SMTPDebug = 0;
+                //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
                 $mail->isSMTP();                                            // Send using SMTP
                 $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-                $mail->Username   = 'enlaceprofesional@una.cr';                     // SMTP username
-                $mail->Password   = 'enlaceprofesional2020';                               // SMTP password
+                //$mail->Username   = 'enlaceprofesional@una.cr';                     // SMTP username
+                $mail->Username   = 'davidcj31@gmail.com';                     // SMTP username
+                $mail->Password   = 'davidcj96';                               // SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
                 $mail->Port       = 587;                                    // TCP port to connect to
                 $mail->SMTPOptions = array(
@@ -37,9 +37,9 @@ function enviarCorreo($correo,$mensaje,$asunto){
                     
                     ));
                 //Recipients
-                $mail->setFrom('enlaceprofesional@una.cr', 'Enlace Profesional UNA');
-                //$mail->addAddress('fiorella5674@gmail.com', 'Fiorella Salgado');     // Add a recipient
-                $mail->addAddress($correo);               // Name is optional
+                $mail->setFrom('davidcj31@gmail.com', 'Enlace Profesional UNA Grande');
+                $mail->addAddress('davidcj31@gmail.com', 'David Cordero');     // Add a recipient
+                //$mail->addAddress($correo); // Name is optional
                 //$mail->addReplyTo('info@example.com', 'Information');
                 //$mail->addCC('cc@example.com');
                 //$mail->addBCC('bcc@example.com');
@@ -55,7 +55,8 @@ function enviarCorreo($correo,$mensaje,$asunto){
                 // $mail->AltBody = 'Esta vivo jajajaja';
 
                 $mail->send();
-                
+                echo "<script> alert('ALHOS') </script>";
+                echo "TODO BIEN TODO CORRECTO";
             } catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }

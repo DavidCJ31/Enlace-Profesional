@@ -1,3 +1,4 @@
+
 <?php 
 require '../constants/check-login.php';
 require '../constants/db_config.php';
@@ -8,7 +9,7 @@ if(isset($_GET['idEm'])){
     $motivoD = $_POST['motivoD'];
     $descripcion = $_POST['Ddenegacion'];
     //$correo = $_POST['email'];
-    $correo = "kevinartavia29@gmail.com";
+    $correo = "davidcj31@gmail.com";
     $asunto = "Acceso Denegado";
     $mensaje = "<strong>Acceso denegado</strong><br/><br/>
     La Universidad Nacional agradece su interés en el Servicio de Intermediación Laboral, sin embargo 
@@ -32,6 +33,7 @@ if(isset($_GET['idEm'])){
         $stmt->execute();
         $enviarEmail = enviarCorreo($correo,$mensaje,$asunto);
         $enviarEmail;
+        echo "Se envia el correo";
             header("location:../users.php?r=3700");
     }catch(PDOException $e){
 echo $e;
