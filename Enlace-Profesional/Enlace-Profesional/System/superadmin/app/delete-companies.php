@@ -8,8 +8,7 @@ if(isset($_GET['idEm'])){
     $id = $_GET['idEm'];
     $motivoD = $_POST['motivoD'];
     $descripcion = $_POST['Ddenegacion'];
-    //$correo = $_POST['email'];
-    $correo = "davidcj31@gmail.com";
+    $correo = $_POST['email'];
     $asunto = "Acceso Denegado";
     $mensaje = "<strong>Acceso denegado</strong><br/><br/>
     La Universidad Nacional agradece su interés en el Servicio de Intermediación Laboral, sin embargo 
@@ -32,7 +31,7 @@ if(isset($_GET['idEm'])){
         $stmM->execute();
         $stmt->execute();
         $enviarEmail = enviarCorreo($correo,$mensaje,$asunto);
-        $enviarEmail;
+        $enviarEmail;        
         echo "Se envia el correo";
             header("location:../users.php?r=3700");
     }catch(PDOException $e){
